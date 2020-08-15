@@ -112,11 +112,11 @@ function canvasApp() {
       for (var j = 0; j < 10; j++) {
         context.fillStyle =
           "rgb(" +
-          Math.floor(255 - 42.5 * i) +
+          Math.floor(255 - 2 * i) +
           ", " +
-          Math.floor(255 - 42.5 * j) +
+          Math.floor(255 - 10 * j) +
           ", 0)";
-        context.fillRect(j * 100, i * 42, 500, 300);
+        context.fillRect(j * 1, i * 20, 500, 300);
       }
     }
     
@@ -130,7 +130,7 @@ function canvasApp() {
     context.font = "10px _san";
     context.fillText(today, 150, 10);
     //Message
-    context.fillStyle = "#FF0000";
+    context.fillStyle = "black";
     context.font = "14px Sans-Serif";
     context.fillText(message, 125, 30);
     //Guesses
@@ -146,7 +146,7 @@ function canvasApp() {
     context.font = "16px Sans-Serif";
     context.fillText("Letters Guessed: " + lettersGuessed.toString(), 10, 260);
     if (gameOver) {
-      context.fillStyle = "#FF0000";
+      context.fillStyle = "white";
       context.font = "40px Sans-Serif";
       context.fillText("You Got it!", 150, 180);
     }
